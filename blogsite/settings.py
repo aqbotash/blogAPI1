@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-7pp+39hdu!7d$$i5(vr0yk-!+-_b_^(bj5k_gye4%fh13hloyq
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['blogapi1.herokuapp.com', 'localhost']
 
 
 INSTALLED_APPS = [

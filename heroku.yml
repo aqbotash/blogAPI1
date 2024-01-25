@@ -1,0 +1,17 @@
+# heroku.yml
+
+build:
+  docker:
+    web: Dockerfile
+
+run:
+  web: /app/entrypoint.sh
+
+env:
+  DJANGO_SETTINGS_MODULE: blogsite.settings
+  POSTGRES_PASSWORD: akbota
+
+addons:
+  postgresql: "12"
+
+# You can add more configurations based on your requirements
