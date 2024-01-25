@@ -18,7 +18,6 @@ COPY pyproject.toml poetry.lock /app/
 # Install project dependencies using Poetry
 RUN poetry install --no-interaction --no-ansi
 COPY . /app
-RUN poetry run python manage.py migrate
 
 # Expose the port that Django will run on
 EXPOSE 8000
