@@ -6,9 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     image: blogapi:latest
-    command: poetry run python manage.py runserver 0.0.0.0:8000
-
-
+    command: /app/entrypoint.sh
     volumes:
       - .:/app
     ports:
@@ -17,6 +15,7 @@ services:
       - ./blogsite/.env
     environment:
       - DJANGO_SETTINGS_MODULE=blogsite.settings
+      - POSTGRES_PASSWORD=akbota
     depends_on:
       - postgres
 
