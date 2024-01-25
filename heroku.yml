@@ -6,12 +6,9 @@ build:
 
 run:
   web: /app/entrypoint.sh
-
-env:
-  DJANGO_SETTINGS_MODULE: blogsite.settings
-  POSTGRES_PASSWORD: akbota
-
-addons:
-  postgresql: "12"
+    DJANGO_SETTINGS_MODULE: "blogsite.settings"
+    POSTGRES_DB: "blog"
+    POSTGRES_USER: "postgres"
+    POSTGRES_PASSWORD: "akbota"
 
 # You can add more configurations based on your requirements
