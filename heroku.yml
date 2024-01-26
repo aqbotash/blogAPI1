@@ -3,10 +3,5 @@ build:
     web: Dockerfile
 
 run:
-  web:
-    command: /app/entrypoint.sh
-    environment:
-      DJANGO_SETTINGS_MODULE: "blogsite.settings"
-      POSTGRES_DB: "blog"
-      POSTGRES_USER: "postgres"
-      POSTGRES_PASSWORD: "akbota"
+  web: /app/entrypoint.sh
+    DJANGO_SETTINGS_MODULE: "blogsite.settings"
